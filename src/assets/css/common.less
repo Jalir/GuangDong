@@ -1,0 +1,72 @@
+// 公共颜色
+@light-a-active-hover: #766df4;
+
+// background会动态改变，要规定不变的颜色
+@dark-background: rgba(24, 24, 24, .9);
+@light-background: #fff;
+
+// 导航栏CSS样式
+@nav-height: 30px;
+@light-nav-background-color: #fff;
+@dark-nav-background-color: rgba(24, 24, 24, .4);
+
+// 卡片样式
+@card-background: #212121;
+
+// 描述文字样式
+@descriptive-text: #aaa;
+
+// app的样式
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#app {
+  --color: #727272;
+  --a-active-hover: @light-a-active-hover;
+  --light-background: @light-background;
+  --dark-background: @dark-background;
+  --background-color: @light-background;
+  --nav-height: @nav-height;
+  --text-background: #fff;
+  --border-color: rgba(0, 0, 0, .5);
+  --nav-background-color: @light-nav-background-color;
+}
+
+#app.dark {
+  --color: #ffffff;
+  --background-color: @dark-background;
+  --border-color: rgba(255, 255, 255, .3);
+  --text-background: #000;
+  --nav-background-color: @dark-nav-background-color;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+input{
+  //border: transparent;  /* 设置边框宽度、样式和颜色 */
+  //border-radius: 5px;     /* 设置圆角半径 */
+  //padding: 5px;
+  //height: 100%;
+  outline:none;
+  border: none;
+  background:none;
+  -webkit-appearance: none;
+}
+
+input:focus-visible{
+  //border: none;
+  border-color: transparent;
+}
+
+a {
+  text-decoration-line:none;
+}
